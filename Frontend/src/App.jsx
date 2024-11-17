@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import FeedPage from './pages/Mainpage';
 import Protectroute from './components/Protectroute';
 import MentorshipPage from './pages/MentorshipPage';
+import Myprofilepage from './pages/Myprofilepage';
 
 function App() {
   const router  = createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
         {
           path : "/mentorship_application" ,
           element : <MentorshipPage /> ,
+        },
+        {
+          path : "/myprofile" ,
+          element : <Myprofilepage /> ,
         }
       ]
     } 

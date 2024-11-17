@@ -6,5 +6,7 @@ export const assigntoken = (id) => {
     }); 
 }
 export const verifytoken = (token) => { 
-    return jwt.verify(token, "secretkey");
+    if (token) {
+        return jwt.verify(token, "secret key").id;
+    }
 }

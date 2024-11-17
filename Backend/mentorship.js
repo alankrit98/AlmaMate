@@ -12,10 +12,10 @@ mentorshipRouter.post("/mentorregistration", async (req, res) => {
     }
     const mentor1 = await mentor.create({user: existinguser._id, type : role });
     if(role == "mentor"){
-      res.send({data : existinguser});
+      res.status(200).send({data : existinguser});
     }
     else{
-      res.send({data : existinguser});
+      res.status(200).send({data : existinguser});
     }
     
   } catch (error) {

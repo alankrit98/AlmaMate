@@ -32,6 +32,7 @@ export default function Login_register() {
 
   const handleRegister = (e) => {
     e.preventDefault()
+    let status ;
     if (registerPassword !== registerConfirmPassword) {
       alert('Passwords do not match')
       return
@@ -43,11 +44,22 @@ export default function Login_register() {
       },
       body: JSON.stringify({ name: registerName, email: registerEmail, password: registerPassword }),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        status = response.status ;
+       return   response.json()})
+       
       .then((data) => {
-        console.log('Success:', data)
-        localStorage.setItem('token', data.token)
-        navigate(`/home/${data.Userdata._id}`)
+        if(status === 400){
+          console.log(data);
+          
+          alert(data.data);
+          return;
+        }
+        else{
+          localStorage.setItem('token', data.token)
+          navigate(`/home/${data.Userdata._id}`)
+        }
+       
       })
       .catch((error) => {
         console.error('Error:', error)

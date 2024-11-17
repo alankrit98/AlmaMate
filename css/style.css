@@ -1,0 +1,246 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    background-color: #001f3f;
+    color: white;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+iframe {
+   height: 60vh;
+    border: none;
+}
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f0ad4e;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Banner Styling */
+.banner {
+    position: relative;
+    height: 400px;
+    background-image: url('../images/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Alumni-SpotLight Section */
+
+.alumni-spotlight {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.alumni-spotlight h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.alumni-spotlight article {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Mentor-Ship Program */
+.mentorship-program {
+    background-color: #eef;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #001f3f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f0ad4e;
+}
+
+/* Event Calendar */
+.event-calendar {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.event-calendar ul {
+    list-style: none;
+}
+
+.event-calendar li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Alumni Resources Hub */
+.resource-hub {
+    padding: 20px;
+    background-color: #eef;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.resource-hub h3 {
+    margin-top: 20px;
+}
+
+/* Networking Events */
+.networking-events {
+    padding: 20px;
+    background-color: #eef;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Alumni-Map */
+.alumni-map {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#map {
+    height: 400px; 
+    background-color: #e0e0e0; 
+}
+
+/* Charity and Volunteer */
+.charity-opportunities {
+    padding: 20px;
+    background-color: #eef;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.charity-opportunities article {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Social Media Icons in Footer */
+.footer a img {
+    width: 24px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.footer a:hover img {
+    filter: brightness(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 30px;
+    }
+    .main-content p {
+        font-size: 1em;
+    }
+}

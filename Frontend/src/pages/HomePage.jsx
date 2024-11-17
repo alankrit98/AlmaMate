@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import {Link , useNavigate} from "react-router-dom"
 export default function HomePage() {
   const [email, setEmail] = useState('')
@@ -9,6 +9,23 @@ export default function HomePage() {
     console.log('Newsletter signup for:', email)
     setEmail('')
   }
+
+  useEffect(
+     () => {
+      if(localStorage.getItem("token")) {
+        fetch("http://localhost:3000/user?token="+localStorage.getItem("token") ).then((response) => response.json()).then((data) => {
+          if(data) {
+            console.log(data);
+            
+            navigate("/home/"+data.data._id);
+          }
+        });
+    }
+  }
+    , [])
+  
+
+  
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -44,7 +61,7 @@ export default function HomePage() {
 
       {/* Features Section */}
       <div className="max-w-6xl mx-auto px-4 py-16 ">
-        <h2 className="text-3xl font-bold text-center mb-8">Why Join AlumniConnect?</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Why Join ReconnectUs?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md ">
             <h3 className="text-xl font-semibold mb-4">Networking Opportunities</h3>
@@ -90,24 +107,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-10">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h2 className="text-2xl font-bold">AlumniConnect</h2>
-            </div>
-            <div className="flex space-x-4">
-              <Link href="/about" className="hover:text-gray-300">About</Link>
-              <Link href="/contact" className="hover:text-gray-300">Contact</Link>
-              <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>
-            </div>
-          </div>
-          <div className="mt-8 text-center text-sm">
-            &copy; {new Date().getFullYear()} AlumniConnect. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   )
-}
+  }
+  
