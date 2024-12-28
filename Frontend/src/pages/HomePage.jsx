@@ -13,7 +13,7 @@ export default function HomePage() {
   useEffect(
      () => {
       if(localStorage.getItem("token")) {
-        fetch("http://localhost:3000/user?token="+localStorage.getItem("token") ).then((response) => response.json()).then((data) => {
+        fetch("https://almamate-1.onrender.com/user?token="+localStorage.getItem("token") ).then((response) => response.json()).then((data) => {
           if(data) {
             console.log(data);
             

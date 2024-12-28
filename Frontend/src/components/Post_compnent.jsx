@@ -6,7 +6,7 @@ export default function PostCreation({ setIspostactive }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:3000/post/createpost', {
+    fetch('https://almamate-1.onrender.com/post/createpost', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -46,7 +46,7 @@ const navigate = useNavigate() ;
         experience,
         skills,
       };
-      fetch("http://localhost:3000/user/userdetailupdate"  , {
+      fetch("https://almamate-1.onrender.com/user/userdetailupdate"  , {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const navigate = useNavigate() ;
     }
 
     useEffect(() => {
-      fetch("http://localhost:3000/user/userdetail", {
+      fetch("https://almamate-1.onrender.com/user/userdetail", {
         headers: {
           "Authorization" : `Bearer ${localStorage.getItem("token")}`,
         },

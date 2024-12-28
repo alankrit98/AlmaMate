@@ -26,7 +26,7 @@ export default function FeedPage() {
 
   const handlelikeclick = (post , id) => {
     setLikenumbers(likenumber + 1);
-    fetch("http://localhost:3000/post/likepost", {
+    fetch("https://almamate-1.onrender.com/post/likepost", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function FeedPage() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:3000/post/getposts")
+    fetch("https://almamate-1.onrender.com/post/getposts")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

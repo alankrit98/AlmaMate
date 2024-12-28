@@ -13,7 +13,7 @@ export default function MentorshipForm() {
     setIsSubmitting(true)
     // Simulate form submission
     
-    fetch('http://localhost:3000/mentorship/mentorregistration', {
+    fetch('https://almamate-1.onrender.com/mentorship/mentorregistration', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

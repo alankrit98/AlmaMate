@@ -11,7 +11,7 @@ export default function Login_register() {
   const navigate = useNavigate() ;
   const handleLogin = (e) => {
     e.preventDefault()
-    fetch('http://localhost:3000/auth/login', {
+    fetch('https://almamate-1.onrender.com/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ export default function Login_register() {
       alert('Passwords do not match')
       return
     }
-    fetch('http://localhost:3000/auth/register', {
+    fetch('https://almamate-1.onrender.com/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
