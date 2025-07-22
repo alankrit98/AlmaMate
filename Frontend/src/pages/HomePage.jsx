@@ -36,7 +36,7 @@ export default function HomePage() {
             <div className="flex space-x-7">
               <div>
                 <Link href="/" className="flex items-center py-4 px-2">
-                  <span className="font-semibold text-gray-500 text-lg">ReconnectUs</span>
+                  <span className="font-semibold text-gray-500 text-lg">AlmaMate</span>
                 </Link>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function HomePage() {
 
       {/* Features Section */}
       <div className="max-w-6xl mx-auto px-4 py-16 ">
-        <h2 className="text-3xl font-bold text-center mb-8">Why Join ReconnectUs?</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Why Join AlmaMate?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md ">
             <h3 className="text-xl font-semibold mb-4">Networking Opportunities</h3>
